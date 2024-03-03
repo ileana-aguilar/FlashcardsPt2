@@ -1,0 +1,25 @@
+.CardDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: rgb(160, 137, 182);*/
+    width: 1000px;
+    height: 600px;
+    margin: 3em;
+    padding: 3em; 
+}
+
+.easy{
+    background: rgb(156, 231, 174);
+    border-radius: 70px;
+}
+
+.medium{
+    background: rgb(254, 210, 148);
+    border-radius: 70px;
+}
+
+.hard{
+    background: rgb(230, 143, 143);
+    border-radius: 70px;
+}
