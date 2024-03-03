@@ -64,15 +64,20 @@ const App = () => {
   const [feedback, setFeedback] = useState('');
 
   const handleGuessSubmit = () => {
-    if (userGuess.toLowerCase() === cards[currentCardIndex].answer.toLowerCase()) {
+    const normalizedUserGuess = userGuess.toLowerCase().trim().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+    const normalizedAnswer = cards[currentCardIndex].answer.toLowerCase().trim().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+  
+    if (normalizedUserGuess === normalizedAnswer) {
       const newStreak = currentStreak + 1;
       setCurrentStreak(newStreak);
       setLongestStreak(Math.max(longestStreak, newStreak));
       setFeedback('Correct!');
     } else {
+      setCurrentStreak(0);
       setFeedback('Incorrect!');
     }
   };
+  
 
   const showRandomCard = () => {
     const randomIndex = Math.floor(Math.random() * cards.length);
@@ -92,14 +97,10 @@ const App = () => {
   function shuffleArray(array) {
     let currentIndex = array.length, randomIndex;
   
-    // While there remain elements to shuffle.
     while (currentIndex !== 0) {
-  
-      // Pick a remaining element.
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
-  
-      // And swap it with the current element.
+
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
     }
@@ -108,11 +109,18 @@ const App = () => {
   }
 
   const shuffleCards = () => {
-    // Create a copy of the cards array to shuffle
+    
     const shuffledCards = shuffleArray([...cards]);
     setCards(shuffledCards);
-    // Optionally, reset the current card index to 0
+    
     setCurrentCardIndex(0);
+  };
+
+  const markCardAsMastered = () => {
+    const newCards = cards.filter((_, index) => index !== currentCardIndex);
+    setCards(newCards);
+
+    setCurrentCardIndex(prevIndex => prevIndex >= newCards.length ? newCards.length - 1 : prevIndex);
   };
 
   return (
@@ -142,6 +150,7 @@ const App = () => {
       <div className='streakInfo'>
         <p>Current Streak: {currentStreak}</p>
         <p>Longest Streak: {longestStreak}</p>
+
       </div>
       <div className='guessing'>
         
@@ -156,7 +165,7 @@ const App = () => {
       <button onClick={goBack}>⭠</button>
       <button onClick={goNext}>⭢</button>
       <button onClick={shuffleCards} >Shuffle Cards</button>
-      <button onClick={shuffleCards} >Mastered Card</button>
+      <button onClick={() => markCardAsMastered()} >Mastered Card</button>
       </div>
   );
 }
