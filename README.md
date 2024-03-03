@@ -9,19 +9,19 @@ Users will be able to:
 
 **The following **required** functionality is completed:**
 
-[x] The user can submit a guess before seeing the flipside of a card
+- [x] The user can submit a guess before seeing the flipside of a card
 
-[x] The user can navigate through an ordered list of cards
+- [x] The user can navigate through an ordered list of cards
 
 **The following **optional** functionality are implemented:**
 
-[x] A shuffle button can be used to randomize the order of the cards
+- [x] A shuffle button can be used to randomize the order of the cards
 
-[ ] A user’s answer may be counted as correct even when it is slightly different from the target answer
+- [ ] A user’s answer may be counted as correct even when it is slightly different from the target answer
 
-[x] A counter displays the user’s current and longest streak of correct responses
+- [x] A counter displays the user’s current and longest streak of correct responses
 
-[ ] A user can mark a card that they have mastered and have it removed from the pool of answers
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers
 
 # Here's how Flashcards looks:
 
