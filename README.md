@@ -27,7 +27,7 @@ Users will be able to:
 
 # Here's how Flashcards looks:
 
-<img src="src/assets/Flashcards2.gif" title="Flashcards gif" alt="Flashcards gif">
+<img src="src/assets/Flashcards2.gif" width="10em"title="Flashcards gif" alt="Flashcards gif">
 
 # Getting started
 **Install dependencies**
