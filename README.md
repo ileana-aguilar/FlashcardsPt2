@@ -17,15 +17,15 @@ Users will be able to:
 
 - [x] A shuffle button can be used to randomize the order of the cards
 
-- [ ] A user’s answer may be counted as correct even when it is slightly different from the target answer
+- [x] A user’s answer may be counted as correct even when it is slightly different from the target answer
 
 - [x] A counter displays the user’s current and longest streak of correct responses
 
-- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers
+- [x] A user can mark a card that they have mastered and have it removed from the pool of answers
 
 # Here's how Flashcards looks:
 
-<img src="src/assets/Flashcards.gif" title="Flashcards gif" alt="Flashcards gif">
+<img src="src/assets/Flashcards2.gif" title="Flashcards gif" alt="Flashcards gif">
 
 # Getting started
 **Install dependencies**
