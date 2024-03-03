@@ -2,10 +2,12 @@
 Flashcards is a flashcard-like format that users can then use to study, learn something new, or play a guessing game. 
 
 Users will be able to: 
-- study cards in a randomized order
+- study cards in order using previous and next buttons
 - submit a guess before seeing the flipside of a card
-- can navigate through an ordered list of cards
+- guess slightly different from the target answer and be counted as correct
 - click a shuffle button to randomize the order of the cards
+- see their current and longest streak of correct responses
+- mark a card that they have mastered and have it removed from the pool of answers
 
 **The following **required** functionality is completed:**
 
